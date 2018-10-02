@@ -6,12 +6,14 @@ import runSequence  from 'run-sequence'
 import path         from 'path'
 import fs           from 'fs'
 
+
 // GET TASK FILES
 const taskFiles = fs.readdirSync('./stack/gulp/gulp-tasks/').filter(name =>
     //  filter files per file-extension
     //  prevent accidental inclusion of possible dot files, fixtures, etc.
         /(\.(js|coffee)$)/i.test(path.extname(name))
     )
+
 
 // SET THE ENVIRONMENT VARIABLES (mainly NODE_ENV)
 // run config before importing/requiring the other tasks
@@ -33,7 +35,7 @@ taskFiles.forEach(taskFile => {
 gulp.task('default', done => {
     const gulpSequence = [
         'set-env'
-    // ,   'clean'
+    ,   'clean'
     // ,   'compile'
     ]
 
