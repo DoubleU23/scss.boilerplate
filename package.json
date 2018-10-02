@@ -1,0 +1,35 @@
+{
+  "name": "scss.boilerplate",
+  "version": "1.0.0",
+  "description": "modular SCSS Boilerplate",
+  "main": "Gulpfile.babel.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoubleU23/scss.boilerplate.git"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "boilerplate",
+    "mediaqueries",
+    "modular",
+    "styling",
+    "progressive",
+    "enhancement",
+    "mixins"
+  ],
+  "author": "Stefan Friedl (DoubleU23)",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/DoubleU23/scss.boilerplate/issues"
+  },
+  "homepage": "https://github.com/DoubleU23/scss.boilerplate#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
