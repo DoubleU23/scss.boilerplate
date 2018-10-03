@@ -1,29 +1,38 @@
-# ToDo:
-* Clean Documentation
-* split open and closed versions
-* extend the mixins
-* test/improve the ability for Backbone/Foundation Boilerplate implementation
-* update the doc (mq's changed ... import flow improved)
-* find solution for importflow (reset, shame, ...) maybe put it in all/mobile MQ
-* seperated files VS. full.scss
 
-# SASS-Boilerplate Documentation
-[TOC]
+# SCSS Boilerplate
+> **modular styling skeleton and compiling setup with gulp**
 
-## MQ's in use:
-__CAUTION ! IE8 has no MQ's - just a min-width__
+#### Table of Contents:  
+<!-- MarkdownTOC autolink="true" -->
 
-__Small (=All)__  
-because we are working with "mobile first" this is the MQ's that's loaded for all Clients  
-> no MQ to use
+- [MediaQueries](#mediaqueries)
+    - [Small \(=All\)](#small-all)
+    - [Medium](#medium)
+    - [Large](#large)
+- [The MQ mixin](#the-mq-mixin)
+- [FILES](#files)
+    - [/inc](#inc)
+    - [/mq](#mq)
+- [TODOS:](#todos)
 
-__Medium__  
-for all tablet devices
-> sreen and (min-width: 640px)
+<!-- /MarkdownTOC -->
 
-__Large__  
-for the desktop view
-> screen and (min-width: 1024px)
+## MediaQueries
+
+### Small (=All) 
+> no MQ to use  
+
+**progressive enhancement** - load this for all clients
+
+### Medium  
+> sreen and (min-width: 640px)  
+
+for all **tablet** devices
+
+### Large  
+> screen and (min-width: 1024px)  
+
+for the **desktop** view
 
 <a name="mq_mixin"></a>
 ## The MQ mixin
@@ -90,3 +99,12 @@ These are the MQ-specific files. Each MQ in it's own file because of two reasons
 <link rel="alternate" media="only screen and (min-width: 640px)" href="/css/tablet.css">  
 <link rel="alternate" media="only screen and (min-width: 1024px)" href="/css/desktop.css">
 ```
+
+## TODOS:
+* Clean Documentation
+* split open and closed versions
+* extend the mixins
+* test/improve the ability for Backbone/Foundation Boilerplate implementation
+* update the doc (mq's changed ... import flow improved)
+* find solution for importflow (reset, shame, ...) maybe put it in all/mobile MQ
+* seperated files VS. full.scss
