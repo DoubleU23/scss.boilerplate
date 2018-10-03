@@ -101,6 +101,7 @@ These are the MQ-specific files. Each MQ in it's own file because of two reasons
 ```
 
 ## TODOS:
+* try to use node-sass-chokidar with gulp-sass
 * Clean Documentation
 * split open and closed versions
 * extend the mixins
