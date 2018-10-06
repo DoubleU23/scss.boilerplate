@@ -1,14 +1,14 @@
 'use strict'
 
 import gulp   from 'gulp'
-import yargs  from 'yargs'
+// import yargs  from 'yargs'
 
-const args 	= require('yargs')
-	.option('env', {
-		alias: 		'e',
-		default: 	'development'
-	})
-	.argv
+const args  = require('yargs')
+    .option('env', {
+        alias:      'e',
+        default:    'development'
+    })
+    .argv
 
 // TBD: shove yarg settings into own task, OR use config modile instead OR make config task and set env there
 // refactor: how to handle settings here? maybe config module would be overkill - decide at later stage

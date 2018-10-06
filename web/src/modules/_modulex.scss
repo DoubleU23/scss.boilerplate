@@ -12,6 +12,6 @@
 
 @include mq('desktop') {
 	body::after {
-		content: 'moduleX in DESKTOP MQ';
+		content: 'moduleX in DESKTOP MQ!';
 	}
 }
