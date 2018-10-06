@@ -1,13 +1,13 @@
 'use strict'
 
-let notify = require('gulp-notify')
+import gulpNotify from 'gulp-notify0'
 
-module.exports = function(error) {
+export default function (error) {
     if (!global.isProd) {
         let args = Array.prototype.slice.call(arguments)
 
         // Send error to notification center with gulp-notify
-        notify.onError({
+        gulpNotify.onError({
             title: 'Compile Error',
             message: '<%= error.message %>'
         }).apply(this, args)

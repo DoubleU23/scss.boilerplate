@@ -1,7 +1,7 @@
 {
   "root": true,
   "extends": [],
-  "plugins": ["react", "standard"],
+  "plugins": ["react", "babel", "import"],
   "env": {
     "browser": true,
     "mocha": false,
@@ -10,9 +10,12 @@
   },
   "parser": "babel-eslint",
   "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
-      "classes": true
+      "classes": true,
+      "modules": true
     }
   },
   "globals": {
@@ -45,10 +48,10 @@
     //
     // eslint-plugin-import
     // "import/ignore": [1, ["\.(scss|less|css|styl|stylo)$"]],
-    "import/no-unresolved": [2, {"commonjs": true, "amd": true, "ignore": ["\\.(scss|less|css|styl|stylo)$"]}],
+    // "import/no-unresolved": [2, {"commonjs": true, "amd": true, "ignore": ["\\.(scss|less|css|styl|stylo)$"]}],
     "import/namespace": 1,
     "import/named": 2,
-    "import/default": [1, {"ignore": ["\\.(scss|less|css|styl|stylo)$"]}],
+    // "import/default": [1, {"ignore": ["\\.(scss|less|css|styl|stylo)$"]}],
     "import/export": 2,
     //
     // ECMAScript 6
