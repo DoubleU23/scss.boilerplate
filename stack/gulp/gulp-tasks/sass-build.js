@@ -38,6 +38,6 @@ gulp.task('sass:build', done => {
     runSequence('sass:build-main', done)
 })
 
-gulp.task('sass:watch', done => {
+gulp.task('sass:watch', () => {
     return gulp.watch(watch, ['sass:build-main'])
 })
