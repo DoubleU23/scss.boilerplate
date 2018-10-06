@@ -4,6 +4,7 @@
   "description": "modular SCSS Boilerplate",
   "main": "Gulpfile.babel.js",
   "scripts": {
+    "start": "./node_modules/gulp/bin/gulp.js",
     "test": "npm test"
   },
   "repository": {
