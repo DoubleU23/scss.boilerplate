@@ -8,7 +8,8 @@ import fs           from 'fs'
 
 
 // GET TASK FILES
-const taskFiles = fs.readdirSync('./stack/gulp/gulp-tasks/').filter(name =>
+const taskFiles = fs.readdirSync('./stack/gulp/gulp-tasks/')
+    .filter(name =>
     //  filter files per file-extension
     //  prevent accidental inclusion of possible dot files, fixtures, etc.
         /(\.(js|coffee)$)/i.test(path.extname(name))
@@ -34,9 +35,9 @@ taskFiles.forEach(taskFile => {
 
 gulp.task('default', done => {
     const gulpSequence = [
-        'set-env'
-    ,   'clean'
-    // ,   'compile'
+        'set-env',
+        'clean'
+    // '    compile'
     ]
 
     // if (process.env.NODE_ENV !== 'development') {
