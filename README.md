@@ -1,5 +1,6 @@
 # SCSS Boilerplate
 
+[![Build Status](https://travis-ci.org/DoubleU23/scss.boilerplate.svg?branch=master)](https://travis-ci.org/DoubleU23/scss.boilerplate)
 [![Build status](https://ci.appveyor.com/api/projects/status/ocspiop97dlpccem/branch/master?svg=true)](https://ci.appveyor.com/project/DoubleU23/scss-boilerplate/branch/master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/DoubleU23/scss.boilerplate.svg)](https://greenkeeper.io/)
 
