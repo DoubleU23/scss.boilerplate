@@ -1,61 +1,52 @@
+# ToDo:
+* Clean Documentation
+* split open and closed versions
+* extend the mixins
+* test/improve the ability for Backbone/Foundation Boilerplate implementation
+* update the doc (mq's changed ... import flow improved)
+* find solution for importflow (reset, shame, ...) maybe put it in all/mobile MQ
+* seperated files VS. full.scss
 
-# SCSS Boilerplate
-> **modular styling skeleton and compiling setup with gulp**
+# SASS-Boilerplate Documentation
+[TOC]
 
-#### Table of Contents:  
-<!-- MarkdownTOC autolink="true" -->
+## MQ's in use:
+__CAUTION ! IE8 has no MQ's - just a min-width__
 
-- [MediaQueries](#mediaqueries)
-    - [Small \(=All\)](#small-all)
-    - [Medium](#medium)
-    - [Large](#large)
-- [The MQ mixin](#the-mq-mixin)
-- [FILES](#files)
-    - [/inc](#inc)
-    - [/mq](#mq)
-- [TODOS:](#todos)
+__Small (=All)__  
+because we are working with "mobile first" this is the MQ's that's loaded for all Clients  
+> no MQ to use
 
-<!-- /MarkdownTOC -->
+__Medium__  
+for all tablet devices
+> sreen and (min-width: 640px)
 
-## MediaQueries
-
-### Small (=All) 
-> no MQ to use  
-
-**progressive enhancement** - load this for all clients
-
-### Medium  
-> sreen and (min-width: 640px)  
-
-for all **tablet** devices
-
-### Large  
-> screen and (min-width: 1024px)  
-
-for the **desktop** view
+__Large__  
+for the desktop view
+> screen and (min-width: 1024px)
 
 <a name="mq_mixin"></a>
 ## The MQ mixin
 ```
 @mixin mq($name) {
-    @if( $mq == $name ) {
-        @content;
-    }
+	@if( $mq == $name ) {
+		@content;
+	}
 }
 ```
 __usage:__
 ```
 body {
-    @include mq('desktop') { color: red; }
-    @include mq('mobile') { color: red; }
+	@include mq('desktop') { color: red; }
+	@include mq('mobile') { color: red; }
 }
 ```
 __OR__
 ```
 @include mq('desktop') {
-    body {
-        color: red;
-    }
+	body {
+		color: red;
+	}
 }
 
 ```
@@ -88,24 +79,14 @@ __/mq/_mobile.scss__, __/mq/_tablet.scss__, __/mq/_dektop.scss__
 These are the MQ-specific files. Each MQ in it's own file because of two reasons:  
 
 * We need to set the context per `$mq` variable  
-    This variable is recognized by the `mq()` mixin used in _main.scss and /modules/*.scss  
-    See [MQ-mixin](#mq_mixin)
-    
+	This variable is recognized by the `mq()` mixin used in _main.scss and /modules/*.scss  
+	See [MQ-mixin](#mq_mixin)
+	
 * Because we have the MQ's in seperate files  
-    we can __set the media queries directly in the `<link>`-Tag__ in our HTML header.  
-    This __prevents that mobile devices have to load the full CSS__ code for all MQ  
-    ( WOW! very fast! such performance! )
+	we can __set the media queries directly in the `<link>`-Tag__ in our HTML header.  
+	This __prevents that mobile devices have to load the full CSS__ code for all MQ  
+	( WOW! very fast! such performance! )
 ```
 <link rel="alternate" media="only screen and (min-width: 640px)" href="/css/tablet.css">  
 <link rel="alternate" media="only screen and (min-width: 1024px)" href="/css/desktop.css">
 ```
-
-## TODOS:
-* try to use node-sass-chokidar with gulp-sass
-* Clean Documentation
-* split open and closed versions
-* extend the mixins
-* test/improve the ability for Backbone/Foundation Boilerplate implementation
-* update the doc (mq's changed ... import flow improved)
-* find solution for importflow (reset, shame, ...) maybe put it in all/mobile MQ
-* seperated files VS. full.scss
