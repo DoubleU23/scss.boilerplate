@@ -1,11 +1,11 @@
 {
   "name": "scss.boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "modular SCSS Boilerplate",
   "main": "Gulpfile.babel.js",
   "scripts": {
-    "start": "node ./node_modules/gulp/bin/gulp.js",
-    "test": "npm test"
+    "start": "gulp",
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
