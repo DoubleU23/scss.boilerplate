@@ -2,7 +2,7 @@
 @import "inc/reset";
 
 body {
-	@include mq {
+	@include mq { // defaults to 'all'
 		color: blue;
 	}
 	@include mq('desktop') {
@@ -12,5 +12,5 @@ body {
 
 // MODULES ARE IMPORTED AT LAST
 // SO THE OVERWRITES ARE ONLY IN MODULE CONTEXT
-@import "modules/testmodule";
+// @import "modules/testmodule";
 @import "modules/modulex";
