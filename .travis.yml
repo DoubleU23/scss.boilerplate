@@ -9,6 +9,9 @@ branches:
   - next
   - /^greenkeeper/.*$/
 
+install:
+- npm install
+
 script:
 - npm run test
 - npm run build
