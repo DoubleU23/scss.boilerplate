@@ -1,0 +1,14 @@
+# env settings
+language: node_js
+node_js: 8
+# travis script adaptions
+branches:
+  only:
+  - master
+  - development
+  - next
+  - /^greenkeeper/.*$/
+
+script:
+- npm run test
+- npm run build
